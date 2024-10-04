@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {windowHeight, windowWidth} from '../../utils/Dimensions';
 import {formatToPercentage, formatToUSD} from '../../Library/Common';
 
-const CryptoCards = ({onPress, props}) => {
+const CryptoCards = ({onPress, props, width}) => {
   const dailyChangePercent = formatToPercentage(
     props?.quote?.USD?.percent_change_1h,
   );
@@ -15,7 +15,7 @@ const CryptoCards = ({onPress, props}) => {
   return (
     <TouchableOpacity
       activeOpacity={0.9}
-      style={styles.cryptoCard}
+      style={[styles.cryptoCard, {width: width ? width : windowWidth / 1}]}
       onPress={onPress}>
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
         <Image

@@ -17,6 +17,7 @@ import {useDispatch, useSelector} from 'react-redux';
 import ScrollViewSpace from '../components/common/ScrollViewSpace';
 import SearchBar from '../components/search/SearchBar';
 import CustomText from '../components/form/CustomText';
+import {windowWidth} from '../utils/Dimensions';
 
 const HomeScreen = ({navigation}) => {
   const state = useSelector(state => state);
@@ -101,9 +102,11 @@ const HomeScreen = ({navigation}) => {
                             navigation.navigate('DetailsScreen', cur)
                           }
                           props={cur}
+                          width={windowWidth / 1.11}
                         />
                       ))
                   : null}
+
                 <ScrollViewSpace />
               </ScrollView>
             </View>
