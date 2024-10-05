@@ -6,3 +6,7 @@ Getting Started
 
 
 - To start the server on the backend, run npm start. which will run on your local machine before you can run the iosor android applications
+
+
+Attached is a Google drive link to the app demo i worked on
+https://drive.google.com/file/d/10A_cha9MqTqRsLT1GqMIykOobHTQRryd/view?usp=sharing
